@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.azone.libfirstpublish.GetData;
+import com.azone.libfirstpublish.GetCountriesData;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView txtPrintStates = (TextView) findViewById(R.id.txtPrintStates);
-        String[] arrStates = new GetData().getStates();
+        String[] arrStates = new GetCountriesData().getCountries();
         for (String state: arrStates ) {
             txtPrintStates.append(state +" \n");
         }
